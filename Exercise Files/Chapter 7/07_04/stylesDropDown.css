@@ -1,0 +1,125 @@
+﻿
+/*** ESSENTIAL STYLES ***/
+#main-menu, #main-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+#main-menu {
+	line-height:	1.0;
+}
+#main-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+#main-menu ul li {
+	width:			100%;
+}
+#main-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+#main-menu li {
+	float:			left; 
+	position:		relative;
+}
+#main-menu a {
+	display:		block;
+	position:		relative;
+}
+#main-menu li:hover ul,
+#main-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+ul#main-menu li:hover li ul,
+ul#main-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul#main-menu li li:hover ul,
+ul#main-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul#main-menu li li:hover li ul,
+ul#main-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul#main-menu li li li:hover ul,
+ul#main-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** DEMO SKIN ***/
+
+ul#main-menu {
+	height: 30px;
+}
+ul#main-menu li {
+	display: inline;
+	height: 30px;
+	margin: 0;
+	list-style-type: none;
+}
+
+ul#main-menu li a {
+	padding: 5px 20px 5px 20px;
+	margin: 3px 0;
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	text-decoration: none;
+	border-left: 1px #ffffff solid;
+	border-right: 1px #ffffff solid;
+	border-bottom: none;
+	
+}
+
+ul#main-menu li a:link,
+ul#main-menu li a:visited {
+padding: 4px 20px;
+}
+
+
+ul#main-menu li a:hover,
+ul#main-menu li a:focus  {
+	color: #333333;
+	border-left: 1px #999999 solid;
+	border-right: 1px #999999 solid;
+	border-bottom: none;
+}
+
+#main-menu li {
+	background:		#ffffff;
+}
+
+#main-menu li ul {
+	border-left: 1px #C6C6C6 solid;
+	border-right: 1px #C6C6C6 solid;
+	border-bottom: 1px #C6C6C6 solid;
+	margin: -9px 0 0 0;
+	padding: 5px 5px 5px 0;
+	background: #ffffff;
+}
+
+#main-menu li li {
+	text-align: left;
+	border-left: 1px #ffffff solid;
+	border-right: 1px #ffffff solid;
+}
+
+
+#main-menu li li a:link,
+#main-menu li li a:focus,
+#main-menu li li a:visited,
+#main-menu li li a:hover {
+	border: none;
+}
+#main-menu li:hover, #main-menu li.sfHover,
+#main-menu a:focus, #main-menu a:hover, #main-menu a:active {
+
+	outline:		0;
+}
+

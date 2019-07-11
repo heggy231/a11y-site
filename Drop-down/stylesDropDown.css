@@ -1,0 +1,124 @@
+﻿
+/*** ESSENTIAL STYLES ***/
+#drop-down-menu, #drop-down-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+#drop-down-menu {
+	line-height:	1.0;
+}
+#drop-down-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+#drop-down-menu ul li {
+	width:			100%;
+}
+#drop-down-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+#drop-down-menu li {
+	float:			left; 
+	position:		relative;
+}
+#drop-down-menu a {
+	display:		block;
+	position:		relative;
+}
+#drop-down-menu li:hover ul,
+#drop-down-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+ul#drop-down-menu li:hover li ul,
+ul#drop-down-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul#drop-down-menu li li:hover ul,
+ul#drop-down-menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul#drop-down-menu li li:hover li ul,
+ul#drop-down-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul#drop-down-menu li li li:hover ul,
+ul#drop-down-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** DEMO SKIN ***/
+
+ul#drop-down-menu {
+	height: 30px;
+}
+ul#drop-down-menu li {
+	display: inline;
+	height: 30px;
+	margin: 0;
+	list-style-type: none;
+}
+
+ul#drop-down-menu li a {
+	padding: 5px 20px 5px 20px;
+	margin: 3px 0;
+	color: #999999;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	text-decoration: none;
+	border-left: 1px #ffffff solid;
+	border-right: 1px #ffffff solid;
+	border-bottom: none;
+	
+}
+
+ul#drop-down-menu li a:link,
+ul#drop-down-menu li a:visited {
+}
+
+
+ul#drop-down-menu li a:hover,
+ul#drop-down-menu li a:focus  {
+	color: #333333;
+	border-left: 1px #999999 solid;
+	border-right: 1px #999999 solid;
+	border-bottom: none;
+}
+
+#drop-down-menu li {
+	background:		#ffffff;
+}
+
+#drop-down-menu li ul {
+	border-left: 1px #C6C6C6 solid;
+	border-right: 1px #C6C6C6 solid;
+	border-bottom: 1px #C6C6C6 solid;
+	margin: -9px 0 0 0;
+	padding: 5px 5px 5px 0;
+	background: #ffffff;
+}
+
+#drop-down-menu li li {
+	text-align: left;
+	border-left: 1px #ffffff solid;
+	border-right: 1px #ffffff solid;
+}
+
+
+#drop-down-menu li li a:link,
+#drop-down-menu li li a:focus,
+#drop-down-menu li li a:visited,
+#drop-down-menu li li a:hover {
+	border: none;
+}
+#drop-down-menu li:hover, #drop-down-menu li.sfHover,
+#drop-down-menu a:focus, #drop-down-menu a:hover, #drop-down-menu a:active {
+
+	outline:		0;
+}
+
